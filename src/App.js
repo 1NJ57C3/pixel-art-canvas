@@ -10,10 +10,12 @@ function App() {
   const [columns, setColumns] = useState(50);
 
   return (
-    <div className="App" style={{'--rows': rows, '--columns': columns}}>
+    <div className="App" style={{ '--max-grids': rows > columns ? rows : columns }}>
       <Canvas rows={rows} columns={columns} mouseDown={mouseDown} setMouseDown={setMouseDown} action={action} setAction={setAction} />
-      <Counter subject={"rows"} count={rows} setSubject={setRows} />
-      <Counter subject={"columns"} count={columns} setSubject={setColumns} />
+      <div className="canvas-size">
+        <Counter subject={"rows"} count={rows} setSubject={setRows} />
+        <Counter subject={"columns"} count={columns} setSubject={setColumns} />
+      </div>
     </div>
   );
 }

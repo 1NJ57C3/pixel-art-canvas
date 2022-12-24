@@ -11,22 +11,30 @@
   justify-content: center;
   height: 80vh;
   width: 80vh;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .row {
   display: flex;
-  height: calc(100%/var(--rows));
+  flex-direction: row;
+  justify-content: center;
+  height: calc(100%/var(--max-grids));
   width: 100%;
 }
 
 .Grid, .selectedGrid {
   border: solid 1px #000000;
-  width: calc(100%/var(--columns));
+  width: calc(100%/var(--max-grids));
   margin: -0.5px;
 }
 
 .selectedGrid {
   background-color: #565656;
+}
+
+.canvas-size {
+  margin: auto;
 }

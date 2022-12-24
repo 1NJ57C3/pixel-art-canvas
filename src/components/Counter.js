@@ -17,9 +17,9 @@ function Counter({ subject, count, setSubject }) {
 
   return (
     <div className={subject}>
-      <button id={'dec' + capitalizeSubject} onClick={handleDecrement}>-</button>
+      <button className='decrement-btn' id={'dec' + capitalizeSubject} onClick={handleDecrement}>-</button>
       {capitalizeSubject}: {count}
-      <button id={'inc' + capitalizeSubject} onClick={handleIncrement}>+</button>
+      <button className='increment-btn' id={'inc' + capitalizeSubject} onClick={handleIncrement}>+</button>
     </div>
   )
 }
