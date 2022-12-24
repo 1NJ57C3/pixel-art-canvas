@@ -10,11 +10,9 @@
   align-items: center;
   justify-content: center;
   height: 80vh;
-  width: 80vh;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .row {
@@ -22,7 +20,7 @@
   flex-direction: row;
   justify-content: center;
   height: calc(100%/var(--max-grids));
-  width: 100%;
+  width: 80vh;
 }
 
 .Grid, .selectedGrid {
